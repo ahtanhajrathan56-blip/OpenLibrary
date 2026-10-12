@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кітап әлемі — Сұраныс беру</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Кітап әлемі</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="detail.html">Кітап туралы</a></li>
+                <li><a href="request.html" class="active">Сұраныс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Кітапқа сұраныс жіберу</h2>
+        
+        <div class="form-container">
+            <form action="#" method="get">
+                <div class="form-group">
+                    <label for="name">Аты-жөні:</label>
+                    <input type="text" id="name" name="name" required minlength="3" placeholder="Мысалы: Ернар Серіков">
+                </div>
+
+                <div class="form-group">
+                    <label for="group">Тобы:</label>
+                    <input type="text" id="group" name="group" required placeholder="Мысалы: ВТ-21">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Электрондық пошта (Email):</label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="book">Кітапты таңдаңыз:</label>
+                    <select id="book" name="book" required>
+                        <option value="">-- Кітапты таңдаңыз --</option>
+                        <option value="abai-zholy">Абай жолы — Мұхтар Әуезов</option>
+                        <option value="oylan-bayi">Ойлан да, байы — Наполеон Хилл</option>
+                        <option value="koshpendiler">Көшпенділер — Ілияс Есенберлин</option>
+                        <option value="kozha">Менің атым Қожа — Бердібек Соқпақбаев</option>
+                        <option value="qara-sozder">Қара сөздер — Абай Құнанбайұлы</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="purpose">Сұраныс мақсаты:</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="">-- Мақсатын таңдаңыз --</option>
+                        <option value="study">Оқу сабақтары үшін</option>
+                        <option value="research">Ғылыми жоба / реферат</option>
+                        <option value="self-development">Жеке даму және оқу</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Пікір немесе қосымша тілек:</label>
+                    <textarea id="comment" name="comment" placeholder="Қосымша ұсыныстарыңызды жазыңыз..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Сұраныс жіберу</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 «Кітап әлемі» электрондық кітапханасы. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+</body>
+</html>

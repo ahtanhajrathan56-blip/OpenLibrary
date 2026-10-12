@@ -1,0 +1,343 @@
+/* ЖАЛПЫ СТИЛЬДЕР */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FAF8F5;
+    color: #2D3748;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ЖОҒАРҒЫ МӘЗІР (HEADER) */
+header {
+    background-color: #1B4332;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D8F3DC;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #D8F3DC;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #FFFFFF;
+    border-bottom: 2px solid #52B788;
+}
+
+/* НЕГІЗГІ БӨЛІК */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+/* БАТЫРМАЛАР */
+.btn {
+    display: inline-block;
+    background-color: #2D6A4F;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1B4332;
+}
+
+/* БАСТЫ БЕТТЕГІ HERO БӨЛІМІ */
+.hero {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 2.5rem;
+    min-width: 300px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    color: #1B4332;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+    color: #4A5568;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 350px;
+}
+
+/* КІТАП КАРТОЧКАЛАРЫ */
+.section-title {
+    text-align: center;
+    color: #1B4332;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.book-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    color: #1B4332;
+    margin-bottom: 0.3rem;
+}
+
+.book-author {
+    font-size: 0.95rem;
+    color: #52B788;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.book-desc {
+    font-size: 0.9rem;
+    color: #718096;
+    flex: 1;
+}
+
+/* КАТАЛОГ КЕСТЕСІ */
+.table-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.catalog-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.catalog-table th, .catalog-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.catalog-table th {
+    background-color: #1B4332;
+    color: white;
+}
+
+.catalog-table tr:hover {
+    background-color: #F8F9FA;
+}
+
+.catalog-table a {
+    color: #2D6A4F;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.catalog-table a:hover {
+    text-decoration: underline;
+}
+
+/* ЖЕКЕ КІТАП БЕТІ (DETAIL) */
+.detail-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.detail-img {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+}
+
+.detail-img img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detail-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.detail-info h2 {
+    color: #1B4332;
+    margin-bottom: 0.5rem;
+}
+
+.detail-info .author {
+    color: #52B788;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.specs-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.specs-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #E2E8F0;
+}
+
+.annotation {
+    margin-bottom: 1.5rem;
+    color: #4A5568;
+}
+
+/* СҰРАНЫС ФОРМАСЫ (REQUEST) */
+.form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1B4332;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* ТӨМЕНГІ БӨЛІК (FOOTER) */
+footer {
+    background-color: #1B4332;
+    color: #D8F3DC;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+/* ТЕЛЕФОНҒА БЕЙІМДЕЛУ (RESPONSIVE) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-text {
+        padding: 1.5rem;
+    }
+}
